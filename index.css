@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    /* font-family: "./font/ChangaOne-Regular.ttf"; */
+    font-family: "./font/Work_Sans/WorkSans-VariableFont_wght.ttf";
+    letter-spacing: 1px;
+    /* background: rgb(99, 137, 173); */
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background: url(./images/bckgrndimg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#vanta {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    position: relative;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+}
+
+header {
+    margin-top: 3em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > img {
+    width: 6em;
+    height: 6em;
+    padding: 1em 0em 1em 0em;
+    /* border-radius: 90px; */
+    /* boder: 1px solid #fff; */
+    /* box-shadow: rgb(28 32 93 /24%) 0px 2px 8px 0px; */
+}
+
+header > h1 {
+    display: inline-block;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border-radius: 1em;
+    background-color: rgba(157, 201, 225, 0.667);
+    color: rgb(255, 255, 255);
+    padding: 0.3em 0.6em;
+    border: 1px solid #fffa;
+    backdrop-filter: blur(10px) saturate(100%) contrast(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+}
+
+ul {
+    box-sizing: border-box;
+    list-style: none;
+    max-width: 500px;
+    margin: 0em auto;
+    padding: 0em 2em 1em 2em;
+}
+
+ul > li {
+    background-color: rgba(157, 201, 225, 0.498);
+    backdrop-filter: blur(10px) saturate(100%) contrast(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(100%) contrast(120%);
+    border-radius: 10em;
+    padding: 1em;
+    margin: 1.4em 0;
+    box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+}
+
+ul > li > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+footer {
+    font-family: "./font/Jomhuria-Regular.ttf";
+    text-align: center;
+}
