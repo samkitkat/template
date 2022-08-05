@@ -94,3 +94,7 @@ footer {
     font-family: "./font/Jomhuria-Regular.ttf";
     text-align: center;
 }
+
+footer > h1 {
+    margin-top: 0px;
+}
