@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    min-height: 125vh;
+    height: 100vh;
     font-family: "./font/Work_Sans/WorkSans-VariableFont_wght.ttf";
     letter-spacing: 1px;
     /* background: rgb(99, 137, 173); */
@@ -28,7 +28,6 @@ main {
     opacity: 0;
     filter: blur(10px);
     transition: opacity 2s ease-in-out, filter 0.5s ease-in-out;
-    padding-bottom: 2.5rem;
 }
 
 header {
@@ -47,14 +46,15 @@ header {
     box-shadow: rgb(28 32 93 /24%) 0px 2px 8px 0px;
 }
 
-header > h1 {
+.bio {
     display: inline-block;
-    font-size: 1em;
+    font-size: 10px;
     letter-spacing: 1px;
-    border-radius: 1em;
+    line-height: 5px;
+    border-radius: 2em;
     background-color: rgba(116, 124, 148, 0.667);
     color: rgb(255, 255, 255);
-    padding: 0.3em 0.6em;
+    padding: 0.5em 0.7em;
     border: 1px solid #fffa;
     backdrop-filter: blur(10px) saturate(100%) contrast(160%);
     -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
@@ -62,6 +62,7 @@ header > h1 {
 
 .socials {
     margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     align-self: center;
@@ -89,14 +90,14 @@ header > h1 {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     column-gap: 5%;
     max-width: 1000px;
-    max-height: 800px;
+    /* max-height: 800px; */
     list-style: none;
     /* for phone max-width: 500px;*/
     margin: 1em auto;
-    padding: 0em 2em 1em 2em;
+    padding: 0em 2em 2em 2em;
     /* for phone padding: 0em 2em 1em 2em;*/
 }
 
@@ -109,7 +110,6 @@ ul > li {
     margin-bottom: 1em;
     box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
 }
-
 
 .info {
     display: inline-flex;
@@ -159,16 +159,16 @@ a {
     font-size: 1.1em;
 }
 
-/* .footer {
-    background-color: rgba(116, 124, 148);
+.footer {
     display: block;
     justify-content: center;
     align-items: flex-end;
     text-align: center;
     font-family: "./font/Jomhuria-Regular.ttf";
+    line-height: 5px;
 
-    position: absolute;
-    bottom: 0;
+    margin-top: 8px;
+    padding-bottom: 1rem;
     width: 100%;
-    height: 2.5rem; 
-} */
+    height: 3rem; 
+}
