@@ -1,4 +1,4 @@
-const data = "https://script.google.com/macros/s/AKfycbzA65vZuGo4EnyNE_5bfwCkHVjhNeKmCzaeX18zB2Rcmu2W3r5nMQHqgUG3tzw4aGHZ/exec";
+const data = "https://script.google.com/macros/s/AKfycbwpCxFqzfh5Ed0Ozn79GMCbcmPJXmdyuGIzUjyLMJlo5_azeYMIq1dlayWNadKqsIde/exec";
 const socials = document.querySelector("#socials");
 const svgs = document.querySelectorAll("svg");
 const ul = document.querySelector("#boxes");
@@ -26,6 +26,7 @@ fetch(data)
         json.bio.forEach((bio) => {
             //image
             pfp.src = bio.imageURL;
+            pfp.classList.add("pic");
             //title name
             const h = document.createElement("h1");
             h.classList.add("name");
@@ -35,13 +36,14 @@ fetch(data)
             const p = document.createElement("p");
             p.textContent = bio.bio;
             bioText.appendChild(p);
+            bioText.classList.add("bio");
             //footer
             footer.innerHTML = bio.footer
         })
         
         /* -------------- Social Bar --------------------------------------- */
         json.socials.forEach((social) => {
-            if (social == "") {
+            if (social.link == "") {
                 return;
             }
             let a = document.createElement("a");
