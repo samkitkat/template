@@ -1,4 +1,4 @@
-const data = "https://script.google.com/macros/s/AKfycbwpCxFqzfh5Ed0Ozn79GMCbcmPJXmdyuGIzUjyLMJlo5_azeYMIq1dlayWNadKqsIde/exec";
+const data = "https://script.google.com/macros/s/AKfycbzunHViT7GQnzaaaLELO2NKK646MRrsPwJGGZ7Z5fmzytI5TR5gtWJ_e_2mk1b1gbjO/exec";
 const socials = document.querySelector("#socials");
 const svgs = document.querySelectorAll("svg");
 const ul = document.querySelector("#boxes");
@@ -6,6 +6,9 @@ const pfp = document.querySelector("#pfp");
 const titleName = document.querySelector("#name");
 const bioText = document.querySelector("#bio");
 const footer = document.querySelector("#footer");
+const metaTag = document.querySelector('meta[property="og:title"]');
+const titleElement = document.querySelector('title');
+const favicon = document.querySelector('link[rel="icon"]');
 
 fetch(data)
     .then((response) => response.json())
@@ -27,11 +30,18 @@ fetch(data)
             //image
             pfp.src = bio.imageURL;
             pfp.classList.add("pic");
+
+            favicon.href = bio.imageURL;
+
             //title name
             const h = document.createElement("h1");
             h.classList.add("name");
             h.textContent = bio.title;
             titleName.appendChild(h);
+
+            metaTag.setAttribute('content', bio.title);
+            titleElement.textContent = "♡ " + bio.title + " links ♡";
+
             //bio text
             const p = document.createElement("p");
             p.textContent = bio.bio;
